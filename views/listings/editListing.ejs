@@ -1,0 +1,79 @@
+<%- layout("/layouts/boilerplate") %>
+<body>
+  <h2>Edit your listing: <%= listingData.title %></h2>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form
+        method="post"
+        action="/listings/<%= listingData._id %>?_method=PUT"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            name="listing[title]"
+            type="text"
+            value="<%= listingData.title %>"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input
+              name="listing[price]"
+              type="text"
+              value="<%= listingData.price %>"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input
+              name="listing[country]"
+              type="text"
+              value="<%= listingData.country %>"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            name="listing[location]"
+            type="text"
+            value="<%= listingData.location %>"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            name="listing[description]"
+            id="description"
+            class="form-control"
+            required
+          >
+<%= listingData.description %></textarea
+          >
+        </div>
+        <div class="mb-3">
+          Original Image <br />
+          <img src="<%= orgImage %>" alt="listing-img" />
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload new Image </label>
+          <input name="listing[image]" type="file" class="form-control" />
+        </div>
+
+        <button class="btn btn-dark mb-3">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+<script src="/public/js/script.js"></script>

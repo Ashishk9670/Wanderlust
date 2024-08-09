@@ -1,0 +1,88 @@
+body {
+  background-color: paleturquoise;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+.navbar {
+  height: 4rem;
+  background-color: white;
+}
+
+footer {
+  background-color: rgb(207, 202, 202);
+}
+.fa-compass {
+  color: rgb(220, 34, 34);
+  font-size: 2rem;
+}
+
+.f-info-links {
+  width: 100%;
+}
+.f-info-socials {
+  width: 100%;
+}
+.f-info-links a {
+  text-decoration: none;
+  color: #222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  align-items: space-evenly;
+  text-align: center;
+}
+.f-info-socials i {
+  align-items: center;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+}
+
+/* cards */
+.card {
+}
+
+.listing {
+  border: none !important;
+  margin: 1rem !important;
+}
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100%;
+  object-fit: cover !important;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+.show-img {
+  width: 6/12;
+  height: 300px;
+}
+
+#map {
+  height: 400px;
+  width: 80vh;
+}

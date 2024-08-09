@@ -1,0 +1,81 @@
+<%- layout("/layouts/boilerplate") %>
+<body>
+  <h2>Fill the form to list your property</h2>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form
+        method="post"
+        action="/listings"
+        class="needs-validation"
+        enctype="multipart/form-data"
+        novalidate
+      >
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            name="listing[title]"
+            type="text"
+            placeholder="Enter title"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Looks good!</div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input
+              name="listing[price]"
+              type="text"
+              placeholder="Enter price"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Looks good!</div>
+          </div>
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input
+              name="listing[country]"
+              type="text"
+              placeholder="Enter country"
+              class="form-control"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            name="listing[location]"
+            type="text"
+            placeholder="Enter location"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            name="listing[description]"
+            id="description"
+            placeholder="description"
+            class="form-control"
+            required
+          ></textarea>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload Image</label>
+          <input name="listing[image]" type="file" class="form-control" />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <button class="btn btn-dark mb-3">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
